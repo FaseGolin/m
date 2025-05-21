@@ -1,19 +1,18 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash, make_response #type: ignore
 import sqlite3
 import os
-# import pg8000 #type: ignore
+import pg8000 #type: ignore
 import json
 from werkzeug.security import generate_password_hash, check_password_hash #type: ignore
 from datetime import datetime
-# from dotenv import load_dotenv #type: ignore
+from dotenv import load_dotenv #type: ignore
 app = Flask(__name__)
 app.secret_key = b'qwerty' 
 DATABASE = 'database.db'
 
 
-# load_dotenv()
+load_dotenv()
 
-# Database connection parameters from environment
 DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
 DB_NAME = os.getenv("DB_NAME")
@@ -27,17 +26,6 @@ def get_db_connection():
     conn = sqlite3.connect(DATABASE)
     conn.row_factory = sqlite3.Row
     return conn
-
-# def get_db_connection():
-#     connection = pg8000.connect(
-#         user=DB_USER,
-#         password=DB_PASSWORD,
-#         database=DB_NAME,
-#         host=DB_HOST,
-#         port=DB_PORT
-#     )
-#     return connection
-
 
 def create_table():
     conn = get_db_connection()
@@ -109,7 +97,7 @@ def login():
         if user and check_password_hash(user['password'], password):
             session['username'] = user['username']
             session['selected_courses'] = user['courses'].split(",") if user['courses'] else []
-            print(f"DEBUG: Loaded courses from DB: {session['selected_courses']}")  # Debugging print
+            print(f"DEBUG: Loaded courses from DB: {session['selected_courses']}") 
 
             flash('You are now logged in!', 'success')
             return redirect(url_for('success'))
@@ -131,7 +119,6 @@ def home():
 
 @app.route('/video/<video_name>')
 def video_page(video_name):
-    # Dictionary of video data
     videos = {
         "copywriting": {
             "title": "COPYWRITING",
@@ -426,11 +413,7 @@ def allUsers():
     base_url = "https://huizjjyrhmxufwgkfwiu.supabase.co/storage/v1/object/public/sida/images/"
     
     return render_template('html.html', allUsers=allUsers, base_url=base_url)
-# @app.route('/success')
-# def success():
-#     if 'username' in session:
-#         selected_courses = session.get('selected_courses', [])
-#         return render_template('success.html', username=session["username"], courses=selected_courses)
+
 
 
 @app.after_request

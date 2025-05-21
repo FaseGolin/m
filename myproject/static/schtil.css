@@ -22,7 +22,6 @@ p{
 }
 
 .logout {
-    /* margin-left: auto; */
     margin-top: 15px;
     padding-left: 20px;
 }
@@ -70,7 +69,6 @@ header {
     margin-bottom: 20px;
   }
 
-/* General mobile-friendly styles */
 body, html {
     margin: 0;
     padding: 0;
@@ -236,14 +234,9 @@ text-align: end;
 }
 
 nav{
-    /* align-items: end; */
-    /* margin: 25px; */
-    /* background-color: whitesmoke; */
-    /* text-align: end; */
     flex: 1;
     font-family: sans-serif;
     font-weight: bold;
-    /* margin-right:20px; */
 }
 
 .rd{
@@ -721,7 +714,6 @@ ul li::before {
 .lådaett img,
 .ladatva img,
 .ladatre img {
-    /* max-width: 35%; */
     height: auto;
     flex: 1 1 300px;
     object-fit: contain;
@@ -766,9 +758,7 @@ ul li::before {
     }
 
     .step3 {
-        font-size: 50px; /* reduce font size for smaller screens */
-        /* word-break: break-word; */
-        /* hyphens: auto; */
+        font-size: 50px;
         max-width: 100%;
     }
 
@@ -808,9 +798,7 @@ ul li::before {
 
 .rubriktre{
     padding-top: 20px;
-    /* padding-left: 10px; */
     padding-bottom: 0px;
-    /* margin-left: 115px; */
     font-size: 50px;
     font-weight: bold;
     color: white;
@@ -904,7 +892,7 @@ input[type="submit"]:hover {
 
 @media (max-width: 600px) {
     .form-container {
-        margin-top: 250px; /* Push form below the navbar */
+        margin-top: 250px; 
         padding: 0 20px;
     }
 
@@ -913,7 +901,6 @@ input[type="submit"]:hover {
         padding: 15px;
     }
 
-    /* Optional: Adjust text sizes for mobile */
     input[type="text"],
     input[type="password"],
     input[type="submit"],
@@ -1004,7 +991,6 @@ h1#yay{
 .skills-inner {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     gap: 20px;
   }
 
@@ -1053,11 +1039,6 @@ h1#yay{
     box-sizing: border-box;
 }
 
-
-/* .widgets:nth-child(4) {
-    grid-column: 2 / 3;
-} */
-
 .widgets {
     background-color: #000000;
     box-shadow: 0px 0px 10px white;     
@@ -1073,7 +1054,6 @@ h1#yay{
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
-    /* overflow: hidden; */
 }
 
 .widgets:hover {
@@ -1084,7 +1064,6 @@ h1#yay{
 .widgets img {
     padding-top: 30px;
     max-width: 40px;
-    /* margin-bottom: 10px; */
     object-fit: contain;
 }
 
@@ -1316,14 +1295,6 @@ h1#yay{
     font-size: 20px;
 }
 
-/* .container {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-} */
-
 .widgets2 {
     width: 175px;
     height: 120px;
@@ -1367,7 +1338,6 @@ h1#yay{
 
 .widgets2 img {
     max-width: 40px;
-    /* margin-bottom: 10px; */
 }
 
 .widgets2 p {
@@ -1446,7 +1416,7 @@ h1#yay{
 
 @media (max-width: 600px) {
     .container {
-        margin-top: 120px; /* Push form below the navbar */
+        margin-top: 120px; 
         padding: 0 20px;
     }
 }
@@ -1457,7 +1427,6 @@ h1#yay{
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     border-radius: 15px;
     padding: 20px;
-    /* text-align: center; */
     width: 175px;
     height: 100px;
     display: flex;
@@ -1468,7 +1437,6 @@ h1#yay{
 }
 
 .widget3 p{
-    /* margin-right: 3px; */
     text-align: center;
     font-family:'Times New Roman', Times, serif;
     color: white;

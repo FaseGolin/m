@@ -289,29 +289,6 @@
 
 </section>
 
-
-<!-- <script>
-    document.querySelectorAll('nav a').forEach((elem) => {
-        elem.addEventListener('click', function(event) {
-            const targetBlock = this.getAttribute('href').split('#')[1];
-
-            if (window.location.pathname === "{{ url_for('home') }}") {
-                // Om vi redan är på home.html, scrolla direkt
-                event.preventDefault();
-                document.getElementById(targetBlock)?.scrollIntoView({ behavior: 'smooth' });
-            } else {
-                // Om vi är på en annan sida, spara målet och gå till home.html
-                sessionStorage.setItem('scrollTo', targetBlock);
-            }
-        });
-    });
-
-
-</script> -->
-
-
-
-
 <script>
     document.querySelectorAll('nav a').forEach((elem) => {
         elem.addEventListener('click', function(event) {
